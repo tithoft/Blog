@@ -4,4 +4,17 @@
 
   <h2>Blogs</h2>
 
+    <ul>
+      {% for blog in blogs %}
+        <li>
+          <a href="{% url 'blogs:blog' blog.id %}">
+            {{ blog.name }}</a>
+        </li>
+      {% empty %}
+        <li>No blogs currently created.</li>
+      {% endfor %}
+    </ul>
+
+    <a href="{% url 'blogs:new_blog' %}">Add a new blog</a>
+
 {% endblock content %}

@@ -8,5 +8,8 @@ app_name = 'blogs'
 urlpatterns = [
     # Home page
     path('', views.index, name='index'),
+    # Page to view all blogs
     path('blogs/', views.blogs, name='blogs'),
+    path('blogs/<int:blog_id>/', views.blog, name='blog'),
+    path('new_blog/', views.new_blog, name='new_blog'),
 ]
