@@ -1,9 +1,18 @@
 {% extends 'blogs/base.html' %}
 
+{% block page_header %}
+  <div class="p-3 mb-4 bg-light border rounded-3">
+    <div class="container-fluid py-4">
+      <h1 class="display-3">Create a blog.</h1>
+
+      <p class="lead">Create your own blog and update it with as many posts as you'd like to share.</p>
+
+      <a class="btn btn-primary btn-lg mt-1" href="{% url 'blogs:new_blog' %}">Create a Blog</a>
+    </div>
+  </div>
+{% endblock page_header %}
+
+
 {% block content %}
-
-  <h1>Blog</h1>
-
-  <p>Create new blogs and add posts for those blogs.</p>
 
 {% endblock content %}
